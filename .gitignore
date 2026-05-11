@@ -1,0 +1,14 @@
+output_assets/
+output_assetsgajah/
+sfm_dataset/
+sfm_dataset_gundam/
+sfm_dataset_test/
+sfm_output/
+sfm_output-goood/
+reconstruct_lib.py
+reconstruct.py
+sfm_video.py
+sfm.py
+recoustructted_model.ply
+tes.py
+
