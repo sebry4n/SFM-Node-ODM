@@ -26,7 +26,8 @@ task = client.create_task(
     {
         'dsm': True, 
         'orthophoto-resolution': 2.0,
-        'feature-quality': 'medium'
+        'feature-quality': 'ultra',
+        'bg-remove': True
     }
 )
 
