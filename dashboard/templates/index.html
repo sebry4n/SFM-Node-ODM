@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Scanner Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Scanner 3D NodeODM</h1>
+            <p>Premium Control Dashboard</p>
+        </header>
+
+        <main class="dashboard">
+            <section class="video-section card">
+                <h2>Live Camera</h2>
+                <div class="video-container">
+                    <img src="/video_feed" alt="Live Camera" id="camera-stream">
+                </div>
+            </section>
+
+            <section class="control-section card">
+                <h2>Controls</h2>
+                <div class="button-group">
+                    <button id="btn-capture" class="btn primary glow">Mulai Capture (12 Posisi)</button>
+                    <button id="btn-process" class="btn secondary">Proses 3D Model</button>
+                </div>
+                
+                <div class="log-terminal">
+                    <h3>System Logs</h3>
+                    <div id="log-output"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
