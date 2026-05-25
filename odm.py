@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 
 
-client = Node("localhost", 3000)
+client = Node("localhost", 3001)
 
 
 dataset_dir = Path(__file__).resolve().parent / "sfm_dataset"
