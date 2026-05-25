@@ -3,7 +3,9 @@ import os
 from pathlib import Path
 
 
-client = Node("192.168.200.38", 6969)
+odm_host = os.environ.get("ODM_HOST", "192.168.200.152")
+odm_port = int(os.environ.get("ODM_PORT", 6969))
+client = Node(odm_host, odm_port)
 
 
 dataset_dir = Path(__file__).resolve().parent / "sfm_dataset"

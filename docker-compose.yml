@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  dashboard:
+    build: .
+    container_name: sfm_dashboard
+    ports:
+      - "5000:5000"
+    # Mem-mount /dev dan set privileged agar USB Camera terdeteksi otomatis & real-time
+    volumes:
+      - /dev:/dev
+      - ./sfm_dataset:/app/sfm_dataset
+      - ./output_assets:/app/output_assets
+    privileged: true
+    environment:
+      - ODM_HOST=nodeodm
+      - ODM_PORT=3000
+    depends_on:
+      - nodeodm
+    restart: unless-stopped
+
+  nodeodm:
+    image: opendronemap/nodeodm
+    container_name: sfm_nodeodm
+    ports:
+      - "3001:3000"
+    restart: unless-stopped
