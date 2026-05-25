@@ -130,7 +130,7 @@ def capture_start():
                 requests.post(URL_RELAY, data={'states': json.dumps(states)}, timeout=3)
             except Exception as e:
                 add_log(f"Relay Error: {e}")
-            time.sleep(2.0)
+            time.sleep(10.0)
             
             if latest_frame is not None:
                 img_path = os.path.join(OUTPUT_DIR, f"frame_{i+1:03d}.jpg")
