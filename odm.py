@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 
 
-odm_host = os.environ.get("ODM_HOST", "192.168.200.152")
+odm_host = os.environ.get("ODM_HOST", "10.4.130.159")
 odm_port = int(os.environ.get("ODM_PORT", 6969))
 client = Node(odm_host, odm_port)
 

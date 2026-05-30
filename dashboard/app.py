@@ -37,6 +37,8 @@ def init_camera(idx):
         if cap is not None:
             cap.release()
         cap = cv2.VideoCapture(idx)
+       
+        cap.set(cv2.CAP_PROP_AUTOFOCUS,1) # Matikan Autofokus (0) kalo nyala (1)
 
 init_camera(camera_index)
 
@@ -130,7 +132,7 @@ def capture_start():
                 requests.post(URL_RELAY, data={'states': json.dumps(states)}, timeout=3)
             except Exception as e:
                 add_log(f"Relay Error: {e}")
-            time.sleep(10.0)
+            time.sleep(13.0)
             
             if latest_frame is not None:
                 img_path = os.path.join(OUTPUT_DIR, f"frame_{i+1:03d}.jpg")
